@@ -1,0 +1,134 @@
+@import "tailwindcss";
+
+.custom-shape {
+    background-image: url('data:image/svg+xml,<svg width="1152" height="933" viewBox="0 0 1152 933" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M257 177C257.464 177 257.696 177 257.893 176.999C306.187 176.784 345.284 137.687 345.499 89.3927C345.5 89.1964 345.5 88.9642 345.5 88.5C345.5 88.0358 345.5 87.8036 345.501 87.6073C345.716 39.3132 384.813 0.216389 433.107 0.000876201C433.304 0 433.536 0 434 0H1011.2C1060.48 0 1085.13 0 1103.95 9.59143C1120.51 18.0283 1133.97 31.4906 1142.41 48.0488C1152 66.8731 1152 91.5154 1152 140.8V792.2C1152 841.485 1152 866.127 1142.41 884.951C1133.97 901.509 1120.51 914.972 1103.95 923.409C1085.13 933 1060.48 933 1011.2 933H140.8C91.5154 933 66.8731 933 48.0488 923.409C31.4906 914.972 18.0283 901.509 9.59143 884.951C0 866.127 0 841.485 0 792.2L0 317.8C0 268.515 0 243.873 9.59143 225.049C18.0283 208.491 31.4906 195.028 48.0488 186.591C66.8731 177 91.5154 177 140.8 177H257Z" fill="%230D0D14"/></svg>');
+    background-size: cover;
+    /* border-radius: 2rem;
+    background-color: #0D0D14;
+    position: relative; */
+}
+
+
+.scrollbar-hide {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+    /* Add a slight right padding to prevent content from butting against the edge */
+    padding-right: 5px;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;
+    /* Chrome, Safari and Opera */
+    width: 0;
+    /* For older browsers */
+}
+
+/* Ensure consistent box model calculations */
+* {
+    box-sizing: border-box;
+}
+
+
+
+
+/* Shadow utility classes */
+.shadow-gre {
+    -webkit-box-shadow: var(--shadow-gre);
+    -moz-box-shadow: var(--shadow-gre);
+    box-shadow: var(--shadow-gre);
+}
+
+.shadow-yel {
+    -webkit-box-shadow: var(--shadow-yel);
+    -moz-box-shadow: var(--shadow-yel);
+    box-shadow: var(--shadow-yel);
+}
+
+.shadow-red {
+    -webkit-box-shadow: var(--shadow-red);
+    -moz-box-shadow: var(--shadow-red);
+    box-shadow: var(--shadow-red);
+}
+
+.shadow-pur {
+    -webkit-box-shadow: var(--shadow-pur);
+    -moz-box-shadow: var(--shadow-pur);
+    box-shadow: var(--shadow-pur);
+}
+
+.shadow-blu {
+    -webkit-box-shadow: var(--shadow-blu);
+    -moz-box-shadow: var(--shadow-blu);
+    box-shadow: var(--shadow-blu);
+}
+
+.shadow-ora {
+    -webkit-box-shadow: var(--shadow-ora);
+    -moz-box-shadow: var(--shadow-ora);
+    box-shadow: var(--shadow-ora);
+}
+
+.shadow-gol {
+    -webkit-box-shadow: var(--shadow-gol);
+    -moz-box-shadow: var(--shadow-gol);
+    box-shadow: var(--shadow-gol);
+}
+
+.shadow-pin {
+    -webkit-box-shadow: var(--shadow-pin);
+    -moz-box-shadow: var(--shadow-pin);
+    box-shadow: var(--shadow-pin);
+}
+
+@theme {
+    /* Dark backgrounds / surfaces */
+    --color-dark-bg: #181A20;
+    --color-dark-card: #232538;
+
+    /* Primary accent gradient (purple → pink) */
+    --color-purple-accent: #5C52F3;
+    --color-pink-accent: #F82F8B;
+
+    /* Additional accents */
+    --color-accent-red: #FD4E5D;
+    --color-accent-green: #4BDC7C;
+    --color-accent-orange: #FF7F2A;
+
+    /* Text colors */
+    --color-primary-text: #FFFFFF;
+    --color-secondary-text: #747880;
+
+    /* Optional gradient stops if needed */
+    --color-accent-start: #5C52F3;
+    /* Purple */
+    --color-accent-end: #F82F8B;
+    /* Pink */
+    /*font-family: 'Outfit', sans-serif;*/
+    /*--font-primary: Outfit, sans-serif;*/
+    --font-outfit: Outfit, sans;
+    /*--font-jaldi-bold: "jaldi-bold", sans-serif;*/
+
+    /* --shadow-pur: 0 0 20px 5px rgba(144, 34, 255, 0.5);
+    --shadow-red: 0 0 20px 5px rgba(253, 78, 93, 0.5);
+    --shadow-green: 0 0 20px 5px rgba(57, 255, 20, 0.7); */
+    --shadow-gre: 0 0 15px 1px rgba(113, 241,13, 1);
+    --shadow-yel: 0 0 15px 1px rgba(250, 231,58, 1);
+    --shadow-red: 0 0 15px 1px rgba(213, 57, 51, 1);
+    --shadow-pur: 0 0 15px 1px rgba(145, 34, 255,1);
+    --shadow-blu: 0 0 15px 1px rgba(59,  130,246,1);
+    --shadow-ora: 0 0 15px 1px rgba(255, 127,42, 1);
+    --shadow-gol: 0 0 15px 1px rgba(255, 215,0,  1);
+    --shadow-pin: 0 0 15px 1px rgba(237, 38, 198,1);
+    /* --shadow-gold: */
+}
+
+/* 
+@font-face {
+    font-family: Outfit, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('./fonts/Outfit-VariableFont_wght.ttf') format('truetype');
+} */
