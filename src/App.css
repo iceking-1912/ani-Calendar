@@ -1,20 +1,49 @@
 @import "tailwindcss";
 
 .custom-shape {
-    /*background-color: var(--color-dark-bg);*/
-    /*-webkit-mask-image: url('data:image/svg+xml;utf8,<svg width="1152" height="933" viewBox="0 0 1152 933" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M257 177C257.464 177 257.696 177 257.893 176.999C306.187 176.784 345.284 137.687 345.499 89.3927C345.5 89.1964 345.5 88.9642 345.5 88.5C345.5 88.0358 345.5 87.8036 345.501 87.6073C345.716 39.3132 384.813 0.216389 433.107 0.000876201C433.304 0 433.536 0 434 0H1011.2C1060.48 0 1085.13 0 1103.95 9.59143C1120.51 18.0283 1133.97 31.4906 1142.41 48.0488C1152 66.8731 1152 91.5154 1152 140.8V792.2C1152 841.485 1152 866.127 1142.41 884.951C1133.97 901.509 1120.51 914.972 1103.95 923.409C1085.13 933 1060.48 933 1011.2 933H140.8C91.5154 933 66.8731 933 48.0488 923.409C31.4906 914.972 18.0283 901.509 9.59143 884.951C0 866.127 0 841.485 0 792.2L0 317.8C0 268.515 0 243.873 9.59143 225.049C18.0283 208.491 31.4906 195.028 48.0488 186.591C66.8731 177 91.5154 177 140.8 177H257Z" fill="white"/></svg>');*/
-    /*-webkit-mask-size: cover;*/
-    /*mask-image: url('data:image/svg+xml;utf8,<svg width="1152" height="933" viewBox="0 0 1152 933" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M257 177C257.464 177 257.696 177 257.893 176.999C306.187 176.784 345.284 137.687 345.499 89.3927C345.5 89.1964 345.5 88.9642 345.5 88.5C345.5 88.0358 345.5 87.8036 345.501 87.6073C345.716 39.3132 384.813 0.216389 433.107 0.000876201C433.304 0 433.536 0 434 0H1011.2C1060.48 0 1085.13 0 1103.95 9.59143C1120.51 18.0283 1133.97 31.4906 1142.41 48.0488C1152 66.8731 1152 91.5154 1152 140.8V792.2C1152 841.485 1152 866.127 1142.41 884.951C1133.97 901.509 1120.51 914.972 1103.95 923.409C1085.13 933 1060.48 933 1011.2 933H140.8C91.5154 933 66.8731 933 48.0488 923.409C31.4906 914.972 18.0283 901.509 9.59143 884.951C0 866.127 0 841.485 0 792.2L0 317.8C0 268.515 0 243.873 9.59143 225.049C18.0283 208.491 31.4906 195.028 48.0488 186.591C66.8731 177 91.5154 177 140.8 177H257Z" fill="white"/></svg>`');*/
-    /*mask-size: cover;*/
-
-    background-color: var(--color-dark-bg);
     position: relative;
-    z-index: 5; /* Places this behind all parent's children */
+    z-index: 1;
+}
+
+.custom-shape::before {
+    background-color: var(--color-dark-bg);
+
+    /* content: "";
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-dark-bg); */
+
+        /* clip-path: path('M257 177 C257.5 177 257.7 177 257.9 177 C306.2 176.8 345.3 137.7 345.5 89.4 C345.5 89.2 345.5 89 345.5 88.5 C345.5 88 345.5 87.8 345.5 87.6 C345.7 39.3 384.8 0.2 433.1 0 C433.3 0 433.5 0 434 0 H1011.2 C1060.5 0 1085.1 0 1104 9.6 C1120.5 18 1134 31.5 1142.4 48 C1152 66.9 1152 91.5 1152 140.8 V792.2 C1152 841.5 1152 866.1 1142.4 885 C1134 901.5 1120.5 915 1104 923.4 C1085 933 1060.5 933 1011.2 933 H140.8 C91.5 933 66.9 933 48 923.4 C31.5 915 18 901.5 9.6 885 C0 866.1 0 841.5 0 792.2 V317.8 C0 268.5 0 243.9 9.6 225 C18 208.5 31.5 195 48 186.6 C66.9 177 91.5 177 140.8 177 H257 Z', 'viewBox: 0 0 1152 933'); */
+
+    /* Webkit browsers */
+    /* -webkit-mask-image: url('./assets/sideBg.svg');
+    -webkit-mask-size: cover;
+    -webkit-mask-position: center;
+    -webkit-mask-repeat: no-repeat; */
+
+    /* Standard properties for Firefox */
+    /* mask-image: url('./assets/sideBg.svg');
+    mask-size: cover;
+    mask-position: center;
+    mask-repeat: no-repeat; */
+
+
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
     -webkit-mask-image: url('./assets/sideBg.svg');
     -webkit-mask-size: cover;
     mask-image: url('./assets/sideBg.svg');
     mask-size: cover;
-
+    border-radius: 88px;
 }
 
 .scrollbar-hide {
@@ -52,6 +81,7 @@
     -webkit-box-shadow: var(--shadow-yel);
     -moz-box-shadow: var(--shadow-yel);
     box-shadow: var(--shadow-yel);
+    box-sizing: unset;
 }
 
 .shadow-red {
@@ -90,13 +120,19 @@
     box-shadow: var(--shadow-pin);
 }
 
+.shadow-ingre {
+    -webkit-box-shadow: var(--shadow-ingre);
+    -moz-box-shadow: var(--shadow-ingre);
+    box-shadow: var(--shadow-ingre);
+}
+
 @theme {
     /* Dark backgrounds / surfaces */
     /*RED*/
     /*--color-dark-bg: #201818;*/
     /*--color-dark-card: #382323;*/
     /*BLUE*/
-    --color-dark-bg: #181A20;
+    --color-dark-bg: #0D0D14;
     --color-dark-card: #232538;
 
 
@@ -126,16 +162,17 @@
     /* --shadow-pur: 0 0 20px 5px rgba(144, 34, 255, 0.5);
     --shadow-red: 0 0 20px 5px rgba(253, 78, 93, 0.5);
     --shadow-green: 0 0 20px 5px rgba(57, 255, 20, 0.7); */
-    --shadow-gre: 0 0 15px 1px rgba(113, 241,13, 1);
-    --shadow-yel: 0 0 15px 1px rgba(250, 231,58, 1);
+    --shadow-gre: 0 0 15px 1px rgba(113, 241, 13, 1);
+    --shadow-ingre: inset 0 0 15px 1px rgba(113, 241, 13, 1);
+    --shadow-yel: 0 0 15px 1px rgba(250, 231, 58, 1);
     --shadow-red: 0 0 15px 1px rgba(213, 57, 51, 1);
-    --shadow-pur: 0 0 15px 1px rgba(145, 34, 255,1);
-    --shadow-blu: 0 0 15px 1px rgba(59,  130,246,1);
-    --shadow-ora: 0 0 15px 1px rgba(255, 127,42, 1);
-    --shadow-gol: 0 0 15px 1px rgba(255, 215,0,  1);
-    --shadow-pin: 0 0 15px 1px rgba(237, 38, 198,1);
+    --shadow-pur: 0 0 15px 1px rgba(145, 34, 255, 1);
+    --shadow-blu: 0 0 15px 1px rgba(59, 130, 246, 1);
+    --shadow-ora: 0 0 15px 1px rgba(255, 127, 42, 1);
+    --shadow-gol: 0 0 15px 1px rgba(255, 215, 0, 1);
+    --shadow-pin: 0 0 15px 1px rgba(237, 38, 198, 1);
 
-    --animate-border : border 4s linear infinite;
+    --animate-border: border 4s linear infinite;
 
     /*--bg-gradient-conic :*/
     /*            linear-gradient(45deg, #172033, theme('colors.slate.800') 50%, #172033) padding-box,*/
@@ -147,18 +184,22 @@
     /*                    #475569 94%,*/
     /*                    #6366f1 ,*/
     /*            ) border-box;*/
---bg-gradient-conic: linear-gradient(45deg, #172033, #1e293b 50%, #172033) padding-box, conic-gradient(from var(--border-angle), rgba(71, 85, 105, 0.48) 80%, #6366f1 86%, #a5b4fc 90%, #6366f1 94%, rgba(71, 85, 105, 0.48)) border-box;
+    --bg-gradient-conic: linear-gradient(45deg, #172033, #1e293b 50%, #172033) padding-box, conic-gradient(from var(--border-angle), rgba(71, 85, 105, 0.48) 80%, #6366f1 86%, #a5b4fc 90%, #6366f1 94%, rgba(71, 85, 105, 0.48)) border-box;
 }
-    /* Define the keyframes */
-    @keyframes border {
-        to { --border-angle: 360deg; }
+
+/* Define the keyframes */
+@keyframes border {
+    to {
+        --border-angle: 360deg;
     }
-    /* Define the custom property */
-    @property --border-angle {
-        inherits: false;
-        initial-value: 0deg;
-        syntax: '<angle>';
-    }
+}
+
+/* Define the custom property */
+@property --border-angle {
+    inherits: false;
+    initial-value: 0deg;
+    syntax: '<angle>';
+}
 
 
 /*Onclick OnLoad*/
@@ -174,3 +215,5 @@
     font-display: swap;
     src: url('./fonts/Outfit-VariableFont_wght.ttf') format('truetype');
 } */
+
+

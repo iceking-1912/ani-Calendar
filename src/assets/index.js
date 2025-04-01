@@ -20,6 +20,8 @@ import MainLeft from "./MainLeft.svg";
 import addGneon from "./addGneon.svg";
 import ticket from "./ticket.svg";
 import notification from "./notification.svg";
+import candle from "./candle.svg";
+import setting from "./setting.svg";
 
 export {
   img1,
@@ -44,4 +46,6 @@ export {
   addGneon,
   ticket,
   notification,
+  candle,
+  setting,
 };
